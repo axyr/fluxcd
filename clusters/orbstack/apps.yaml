@@ -1,0 +1,12 @@
+piVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: apps
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  path: ./apps/orbstack
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
